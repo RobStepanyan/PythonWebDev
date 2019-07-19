@@ -20,5 +20,7 @@ from users import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('carsell.urls')),
-    path('register/', views.register, name="users-register"),
+    path('signup/', views.sign_up, name="users-sign-up"),
+    path('login/', views.log_in, name="users-log-in"),
+
 ]

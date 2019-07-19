@@ -386,3 +386,21 @@ table a, #comments a{background-color:inherit;}
 	.font-x2{font-size:1.4rem;}
 	.font-x3{font-size:1.6rem;}
 }
+
+.form-control {
+    display: inline-block;
+    width: 50%;
+    max-width: 300px;
+    min-width: 250px;
+    height: calc(1.5em + .75rem + 15px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
