@@ -1,12 +1,4 @@
 @charset "utf-8";
-/*
-Template Name: Bronea
-Author: <a href="https://www.os-templates.com/">OS Templates</a>
-Author URI: https://www.os-templates.com/
-Licence: Free to use under our free template licence terms
-Licence URI: https://www.os-templates.com/template-terms
-File: Layout CSS
-*/
 
 @import url("font-awesome.min.css");
 @import url("framework.css");
@@ -58,7 +50,23 @@ File: Layout CSS
 .container{padding:80px 0;}
 
 /* Content */
-.container .content{}
+.container .content{
+	border-radius: 25px;
+	border: 1px solid #D01818;
+	box-shadow: 10px 10px 25px -10px rgba(0,0,0,.75);
+	padding: 20px 50px;	
+	min-width: 250px;
+	max-width: 400px;
+	margin: auto;
+}
+
+input[name=username], input[name=password], input[name=password1],
+input[name=password2], input[name=email] {
+	padding: 15px;
+	display: inline-block;
+	background: #f1f1f1;
+  }
+  
 
 .sectiontitle{display:block; max-width:55%; margin:0 auto 80px; text-align:center;}
 .sectiontitle *{margin:0;}
@@ -385,22 +393,5 @@ table a, #comments a{background-color:inherit;}
 
 	.font-x2{font-size:1.4rem;}
 	.font-x3{font-size:1.6rem;}
-}
-
-.form-control {
-    display: inline-block;
-    width: 50%;
-    max-width: 300px;
-    min-width: 250px;
-    height: calc(1.5em + .75rem + 15px);
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    font-weight: 400;
-    color: #495057;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    border-radius: .25rem;
-    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
