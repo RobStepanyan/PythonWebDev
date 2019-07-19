@@ -3,38 +3,23 @@
 {% load crispy_forms_tags %}
 {% block content %}
 <div class="wrapper">
-    <div id="pageintro" class="hoc clear"> 
-      	<div class="one_third first">
-      		<article>
-        		<div>
-          			<p class="heading">Welcome to</p>
-          			<h2 class="heading">Carsell.com</h2>
-          			<p>Want to sell your own car? <i href="">Click here</i></p>
-        		</div>
-        		<footer>
-					<ul class="nospace inline pushright">
-						<li><a class="btn inverse" href="#">Iaculis</a></li>
-						<li><a class="btn" href="#">Finibus</a></li>
-					</ul>
-        		</footer>
-      		</article>
-    	</div>
-    	<div class="two_third">
-        	<main class="hoc container clear"> 
-            	<div class="content">
-					<form method="POST">
-						{% csrf_token %}
-						<fieldset class="form-group">
-							{{ form|crispy }}
-						</fieldset>
-						<div class="form-group">
-							<button class="btn btn-outline-info" type="submit">Log In</button>
-						</div>
-					</form>
-				</div>
-        	</main>
-    	</div>
-    </div>
+	<div id="pageintro" class="hoc clear">
+		<main class="hoc container clear"> 
+			<div class="content">
+				<p class="heading">Select the Car</p>
+				<form method="POST">
+					{% csrf_token %}
+					<fieldset class="form-group">
+						{% crispy form %}
+					</fieldset>
+					<div class="form-group">
+						<button class="btn" type="submit" style="width:100%">Search</button>
+					</div>
+				</form>
+		
+			</div>
+		</main> 
+	</div>
 </div>
 <div class="wrapper row3">
   <div class="hoc container clear"> 
@@ -139,7 +124,7 @@
       <h6 class="heading">Our history</h6>
       <p>Read about the journey of our company</p>
     </div>
-    <p><a class="btn medium" href="#">Read More &raquo;</a></p>
+    <p><a class="btn medium" href="{% url 'carsell-about' %}">Read More &raquo;</a></p>
     <!-- ################################################################################################ -->
   </article>
 </div>
