@@ -49,7 +49,7 @@ class CarSelectForm(forms.Form):
     
     to_years = (('', 'To'),) + from_years[1:]
 
-    from_prices = ['$' + str(x) for x in range(1000, 200000, 1000)]
+    from_prices = ['$' + str(x) for x in range(1000, 4000000, 1000)]
     from_prices = tuple(zip(from_prices, from_prices))
     from_prices = (('', 'From'),) + from_prices
 
