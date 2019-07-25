@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from .forms import UserSignUpForm, UserLogInForm
 
@@ -27,3 +28,7 @@ def log_in(request):
         'title': 'Log In'
     }
     return render(request, './users/log_in.html', context)
+
+@login_required
+def profile(request):
+    return render(request, 'users/profile.html')
