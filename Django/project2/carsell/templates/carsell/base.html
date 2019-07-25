@@ -23,12 +23,25 @@
       <nav id="mainav" class="fl_right">
         <ul class="clear">
           <li class="active"><a href="{% url 'carsell-home' %}">Home</a></li>
-          <li><a href="{% url 'users-sign-up' %}">Sign Up</a></li>
-          <li><a href="{% url 'users-log-in' %}">Log In</a></li>
+          
+          {% if user.is_authenticated %}
+            <li><a href="{% url 'users-log-out' %}">Log Out</a></li>
+            
+          {% else %}
+            <li><a href="{% url 'users-sign-up' %}">Sign Up</a></li>
+            <li><a href="{% url 'users-log-in' %}">Log In</a></li>
+          {% endif %}
         </ul>
       </nav>
     </header>
   </div>
+  {% if messages %}
+    {% for message in messages %}
+      <div class="alert alert-{{ message.tags }}">
+        {{ message }}
+    {% endfor %}
+  {% endif %}
+      </div>
   {% block content %}{% endblock %}
 <div class="wrapper row5">
   <div id="copyright" class="hoc clear"> 

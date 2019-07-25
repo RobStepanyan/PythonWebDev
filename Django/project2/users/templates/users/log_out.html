@@ -1,0 +1,16 @@
+{% extends "carsell/base.html" %}
+{% block content %}
+<div class="wrapper row3">
+    <main class="hoc container clear"> 
+        <div class="content"> 
+            <h1>Logged Out</h1>
+            <div class="border-top pt-3">
+                <small class="text-muted">
+                    Want to log in again?
+                    <a class="ml-2" href="{% url 'users-log-in' %}">Log In</a>
+                </small>
+            </div>
+        </div>
+    </main>
+</div>
+{% endblock content %}

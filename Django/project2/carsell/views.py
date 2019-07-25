@@ -3,8 +3,15 @@ from .forms import CarSelectForm
 
 def home(request):
     form = CarSelectForm(request.POST)
-    return render(request, 'carsell/home.html', {'form': form, "title": 'Carsell'})
+    context = {
+        'form': form, 
+        'title': 'Carsell'
+    }
+    return render(request, 'carsell/home.html', context)
 
 def about(request):
-    return render(request, 'carsell/about.html', {'title': 'Our Story'})
+    context = {
+        'title': 'Our Story'
+    }
+    return render(request, 'carsell/about.html', context)
 

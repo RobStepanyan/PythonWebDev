@@ -9,13 +9,21 @@ def sign_up(request):
         if form.is_valid():
             form.save()
             username = form.cleaned_data.get('username')
-            messages.success(request, f'Account created for {username}')
-            return redirect('carsell-home')
+            messages.success(request, f'Your account has been created! You are now able to log in')
+            return redirect('users-log-in')
     else:
         form = UserSignUpForm()
-    return render(request, './users/sign_up.html', {'form': form, 'title': 'Sign Up'})
+    context = {
+        'form': form, 
+        'title': 'Sign Up'
+    }
+    return render(request, './users/sign_up.html', context)
     
 
 def log_in(request):
     form = UserLogInForm(request.POST)
-    return render(request, './users/log_in.html', {'form': form, "title": 'Log In'})
+    context = {
+        'form': form, 
+        'title': 'Log In'
+    }
+    return render(request, './users/log_in.html', context)
