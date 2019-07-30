@@ -1,8 +1,18 @@
+from .models import Post
+from .forms import CarSelectForm
 from django.shortcuts import render
-from django.http import HttpResponse
 
 def home(request):
-    return HttpResponse('<h1> Home </h1>')
+    form = CarSelectForm(request.POST)
+    context = {
+        'form': form, 
+        'title': 'Carsell',
+        'posts': Post.objects.all(),
+    }
+    return render(request, 'carsell/home.html', context)
 
 def about(request):
-    return HttpResponse('<h1> About </h1>')
+    context = {
+        'title': 'Our Story',
+    }
+    return render(request, 'carsell/about.html', context)
