@@ -7,6 +7,7 @@
               <a class="mr-2" href="#">{{ post.author }}</a>
               <small class="text-muted">{{ post.date_posted|date:"F d, Y" }}</small>
             </div>
+            <img class="img-thumbnail float-left mr-3" src="{{ post.image.url }}">
             <a class="article-title" href="#"><h3>{{ post.title }}</h3><h4 class="text-muted">{{ post.price }}</h4></a>
             <p class="article-content">{{ post.short_description }}</p>
           </div>
