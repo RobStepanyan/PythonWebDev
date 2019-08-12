@@ -2,6 +2,7 @@ from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
 from PIL import Image
+from django.urls import reverse
 
 class Post(models.Model):
 
@@ -105,7 +106,9 @@ class Post(models.Model):
                 self.color, makes_dict[self.make], self.model + '. ' + self.doors, 
                 'doors and ' + self.seats + ' seats ' + body_type_dict[self.body_type] + '. With ' + self.engine_size + 'L', 
                 self.engine_type, self.hp + 'hp engine.'))
-
+    
+    def get_absolute_url(self):
+        return reverse('post-detail', kwargs={'pk': self.pk})
     def __str__(self):
         makes_dict = dict(Post.MAKES)
         return makes_dict[self.make] + ' ' + self.model
