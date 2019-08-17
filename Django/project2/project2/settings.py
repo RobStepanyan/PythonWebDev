@@ -78,9 +78,12 @@ WSGI_APPLICATION = 'project2.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'default': {
+        'ENGINE': 'djongo',
+        'NAME': 'Carsell',
+        'HOST': 'mongodb+srv://admin:'+os.environ.get('MongoDBUSER')+'@carsell-xbunm.gcp.mongodb.net/test?retryWrites=true&w=majority',
+        'USER': os.environ.get('MongoDBUSER'),
+        'PASSWORD': os.environ.get('MongoDBPASS'),
     }
 }
 
