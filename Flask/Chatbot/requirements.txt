@@ -1,0 +1,5 @@
+Flask
+pyMongo
+pprint
+chatterbot-corpus
+chatterbot
