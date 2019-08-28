@@ -26,6 +26,8 @@ body {
   margin-right: auto;
   width: 40%;
   margin-top: 60px;
+  overflow-y: auto;
+  height: 450px;
 }
 #userInput {
   margin-left: auto;

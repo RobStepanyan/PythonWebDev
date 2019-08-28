@@ -2,14 +2,15 @@ from flask import Flask, render_template, request
 from chatterbot import ChatBot
 from chatterbot.trainers import ChatterBotCorpusTrainer
 import os
+from gevent.pywsgi import WSGIServer
 
 app = Flask(__name__)
 
 MONGODB_PASS = os.environ.get('mongoDBPASS')
 chatbot = ChatBot(
-    'Ron Obvious', 
-    storage_adapter='chatterbot.storage.MongoDatabaseAdapter', 
-    database_uri='mongodb+srv://admin:'+ MONGODB_PASS +'@cluster0-62hvi.gcp.mongodb.net/test?retryWrites=true&w=majority')
+    'Ron Obvious',
+    storage_adapter='chatterbot.storage.MongoDatabaseAdapter',
+    database_uri='mongodb+srv://admin:' + MONGODB_PASS + '@cluster0-62hvi.gcp.mongodb.net/test?retryWrites=true&w=majority')
 
 # Create a new trainer for the chatbot
 trainer = ChatterBotCorpusTrainer(chatbot)
@@ -30,4 +31,7 @@ def get_bot_response():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    http_server = WSGIServer(('', 5000), app)
+    print('Server is running!')
+    http_server.serve_forever()
+    

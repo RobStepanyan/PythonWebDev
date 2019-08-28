@@ -8,4 +8,5 @@ The point of this project is to practice some advanced python stuff.</p>
 <h2>Things that are already done.</h2>
 <ol>
 <li>Connect to MongoDB Atlas</li>
+<li>Gevent WSGI Server</li>
 </ol>
