@@ -1,6 +1,4 @@
 Flask
-pyMongo
-pprint
 chatterbot-corpus
 chatterbot
 pyyaml<5.2,>=5.1
