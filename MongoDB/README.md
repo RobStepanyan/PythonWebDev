@@ -1,8 +1,7 @@
 <h1>MongoDB</h1>
-Python mongo exercises and solutions.
-<hr>
 Useful Links:
 
+- [MongoDB official tutorial](https://docs.mongodb.com/manual/crud/)
 - [W3Schools' MongoDB tutorial](https://www.w3schools.com/python/python_mongodb_getstarted.asp)
 - [W3Schools' MongoDB exercises](https://www.w3resource.com/mongodb-exercises/)
 - [Python & MongoDB Book](https://drive.google.com/file/d/1-zJfbbEGBvXiLvjTFjyBiLRMqqpp12Dp/view?usp=sharing)
