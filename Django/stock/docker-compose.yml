@@ -4,8 +4,6 @@ services:
   stock:
     build: .
     command: python manage.py runserver 0.0.0.0:8000
-    command: python manage.py makemigrations
-    command: python manage.py migrate
     volumes:
       - .:/stock
     ports:
