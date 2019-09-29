@@ -8655,6 +8655,7 @@ body .no-padding{
   width: 170px !important;
 }
 
+
 /* News slider */
 section.slide {
   background: #007bff;
@@ -8672,13 +8673,6 @@ section.slide {
   margin: 1.5rem 0;
 }
 
-.slide .card-title {
-  margin: 0.5rem 0;
-  font-size: 3rem;
-  letter-spacing: .1rem;
-  font-weight: bold;
-}
-
 .slide ul li {
   margin-bottom: 1rem;
 }
@@ -8694,12 +8688,4 @@ section.slide {
   font-weight: bold;
   padding: 1rem;
   transition: all 0.2s;
-}
-
-/* Hover Effects on Card */
-
-@media (min-width: 992px) {
-  .slide .card:hover {
-    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
-  }
 }
