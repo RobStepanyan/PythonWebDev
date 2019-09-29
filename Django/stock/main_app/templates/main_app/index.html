@@ -44,10 +44,10 @@
             <a class="nav-link js-scroll-trigger" href="#services">Services</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+            <a class="nav-link js-scroll-trigger" href="#news">News</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#contact">News</a>
+            <a class="nav-link js-scroll-trigger" href="#contact">Contact Us</a>
           </li>
         </ul>
       </div>
@@ -70,14 +70,23 @@
     </div>
   </header>
 
-  <!-- About Section -->
-  <section class="page-section bg-primary" id="about">
-    <div class="container">
-      <div class="row">
-        <div class="col text-center">
-          <h2 class="text-white mt-0">We've got what you need!</h2>
+  <!-- Account Section -->
+  <section class="page-section bg-primary p-5" id="about">
+    <div class="container mt-4 mb-4">
+      <div class="col text-center">
+        <i class="fas fa-4x fa-user text-white mb-4"></i>
+      </div>
+      <h2 class="text-white text-center">Your account</h2>
+      
+      <div class="row mt-4">
+        <div class="col-md-3 ml-auto text-center mb-5 mb-lg-0">
+          <a href="{% url 'login' %}" class="btn btn-xl btn-same bg-white text-primary"> Log In</a>
+        </div>
+        <div class="col-md-3 mr-auto text-center">
+          <a href="{% url 'signup' %}" class="btn btn-xl btn-same bg-white text-primary">Sign Up</a>
         </div>
       </div>
+    
     </div>
   </section>
 
@@ -119,97 +128,222 @@
     </div>
   </section>
 
-  <!-- Portfolio Section -->
-  <section id="portfolio">
-    <div class="container-fluid p-0">
-      <div class="row no-gutters">
-        <div class="col-lg-4 col-sm-6">
-          <a class="portfolio-box" href="{% static 'main_app/img/portfolio/fullsize/1.jpg' %}">
-            <img class="img-fluid" src="{% static 'main_app/img/portfolio/thumbnails/1.jpg' %}" alt="">
-            <div class="portfolio-box-caption">
-              <div class="project-category text-white-50">
-                Category
-              </div>
-              <div class="project-name">
-                Project Name
-              </div>
-            </div>
-          </a>
+ 
+  <!-- News Section -->
+  <section class="page-section bg-dark text-white p-8" id="news">
+    <div class="container text-center">
+      <h2 class="mb-4">What's happening</h2>
+    </div>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- First Group -->
+      <div  class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="container">
+              <div class="row">
+                  
+                <div class="col-lg-4">
+                    <div class="card mb-5 mb-lg-0">
+                      <div class="card-body">
+                        <h5 class="card-title text-muted text-uppercase text-center">Free</h5>
+                        <hr>
+                        <ul class="fa-ul">
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>Single User</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>5GB Storage</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Public Projects</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>Community Access</li>
+                          <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Unlimited Private Projects</li>
+                          <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Dedicated Phone Support</li>
+                          <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Free Subdomain</li>
+                          <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Monthly Status Reports</li>
+                        </ul>
+                        <a href="#" class="btn btn-block btn-primary text-uppercase">Read more</a>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-lg-4">
+                    <div class="card mb-5 mb-lg-0">
+                      <div class="card-body">
+                        <h5 class="card-title text-muted text-uppercase text-center">Plus</h5>
+                        <hr>
+                        <ul class="fa-ul">
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>5 Users</strong></li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>50GB Storage</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Public Projects</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>Community Access</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Private Projects</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>Dedicated Phone Support</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>Free Subdomain</li>
+                          <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Monthly Status Reports</li>
+                        </ul>
+                        <a href="#" class="btn btn-block btn-primary text-uppercase">Read more</a>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-lg-4">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title text-muted text-uppercase text-center">Pro</h5>
+                        <hr>
+                        <ul class="fa-ul">
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>Unlimited Users</strong></li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>150GB Storage</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Public Projects</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>Community Access</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Private Projects</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>Dedicated Phone Support</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>Unlimited</strong> Free Subdomains</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>Monthly Status Reports</li>
+                        </ul>
+                        <a href="#" class="btn btn-block btn-primary text-uppercase">Read more</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          </div>
         </div>
-        <div class="col-lg-4 col-sm-6">
-          <a class="portfolio-box" href="{% static 'main_app/img/portfolio/fullsize/2.jpg' %}">
-            <img class="img-fluid" src="{% static 'main_app/img/portfolio/thumbnails/2.jpg' %}" alt="">
-            <div class="portfolio-box-caption">
-              <div class="project-category text-white-50">
-                Category
-              </div>
-              <div class="project-name">
-                Project Name
-              </div>
-            </div>
-          </a>
+        <!-- Second Group -->
+        <div class="carousel-item">
+          <div class="container">
+              <div class="row">
+                  
+                <div class="col-lg-4">
+                    <div class="card mb-5 mb-lg-0">
+                      <div class="card-body">
+                        <h5 class="card-title text-muted text-uppercase text-center">Free</h5>
+                        <hr>
+                        <ul class="fa-ul">
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>Single User</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>5GB Storage</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Public Projects</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>Community Access</li>
+                          <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Unlimited Private Projects</li>
+                          <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Dedicated Phone Support</li>
+                          <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Free Subdomain</li>
+                          <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Monthly Status Reports</li>
+                        </ul>
+                        <a href="#" class="btn btn-block btn-primary text-uppercase">Read more</a>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-lg-4">
+                    <div class="card mb-5 mb-lg-0">
+                      <div class="card-body">
+                        <h5 class="card-title text-muted text-uppercase text-center">Plus</h5>
+                        <hr>
+                        <ul class="fa-ul">
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>5 Users</strong></li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>50GB Storage</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Public Projects</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>Community Access</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Private Projects</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>Dedicated Phone Support</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>Free Subdomain</li>
+                          <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Monthly Status Reports</li>
+                        </ul>
+                        <a href="#" class="btn btn-block btn-primary text-uppercase">Read more</a>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-lg-4">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title text-muted text-uppercase text-center">Pro</h5>
+                        <hr>
+                        <ul class="fa-ul">
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>Unlimited Users</strong></li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>150GB Storage</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Public Projects</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>Community Access</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Private Projects</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>Dedicated Phone Support</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>Unlimited</strong> Free Subdomains</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>Monthly Status Reports</li>
+                        </ul>
+                        <a href="#" class="btn btn-block btn-primary text-uppercase">Read more</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          </div>
         </div>
-        <div class="col-lg-4 col-sm-6">
-          <a class="portfolio-box" href="{% static 'main_app/img/portfolio/fullsize/3.jpg' %}">
-            <img class="img-fluid" src="{% static 'main_app/img/portfolio/thumbnails/3.jpg' %}" alt="">
-            <div class="portfolio-box-caption">
-              <div class="project-category text-white-50">
-                Category
-              </div>
-              <div class="project-name">
-                Project Name
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-4 col-sm-6">
-          <a class="portfolio-box" href="{% static 'main_app/img/portfolio/fullsize/4.jpg' %}">
-            <img class="img-fluid" src="{% static 'main_app/img/portfolio/thumbnails/4.jpg' %}" alt="">
-            <div class="portfolio-box-caption">
-              <div class="project-category text-white-50">
-                Category
-              </div>
-              <div class="project-name">
-                Project Name
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-4 col-sm-6">
-          <a class="portfolio-box" href="{% static 'main_app/img/portfolio/fullsize/5.jpg' %}">
-            <img class="img-fluid" src="{% static 'main_app/img/portfolio/thumbnails/5.jpg' %}" alt="">
-            <div class="portfolio-box-caption">
-              <div class="project-category text-white-50">
-                Category
-              </div>
-              <div class="project-name">
-                Project Name
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-4 col-sm-6">
-          <a class="portfolio-box" href="{% static 'main_app/img/portfolio/fullsize/6.jpg' %}">
-            <img class="img-fluid" src="{% static 'main_app/img/portfolio/thumbnails/6.jpg' %}" alt="">
-            <div class="portfolio-box-caption p-3">
-              <div class="project-category text-white-50">
-                Category
-              </div>
-              <div class="project-name">
-                Project Name
-              </div>
-            </div>
-          </a>
+        <!-- Third Group -->
+        <div class="carousel-item">
+          <div class="container">
+              <div class="row">
+                  
+                <div class="col-lg-4">
+                    <div class="card mb-5 mb-lg-0">
+                      <div class="card-body">
+                        <h5 class="card-title text-muted text-uppercase text-center">Free</h5>
+                        <hr>
+                        <ul class="fa-ul">
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>Single User</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>5GB Storage</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Public Projects</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>Community Access</li>
+                          <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Unlimited Private Projects</li>
+                          <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Dedicated Phone Support</li>
+                          <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Free Subdomain</li>
+                          <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Monthly Status Reports</li>
+                        </ul>
+                        <a href="#" class="btn btn-block btn-primary text-uppercase">Read more</a>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-lg-4">
+                    <div class="card mb-5 mb-lg-0">
+                      <div class="card-body">
+                        <h5 class="card-title text-muted text-uppercase text-center">Plus</h5>
+                        <hr>
+                        <ul class="fa-ul">
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>5 Users</strong></li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>50GB Storage</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Public Projects</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>Community Access</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Private Projects</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>Dedicated Phone Support</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>Free Subdomain</li>
+                          <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Monthly Status Reports</li>
+                        </ul>
+                        <a href="#" class="btn btn-block btn-primary text-uppercase">Read more</a>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-lg-4">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title text-muted text-uppercase text-center">Pro</h5>
+                        <hr>
+                        <ul class="fa-ul">
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>Unlimited Users</strong></li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>150GB Storage</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Public Projects</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>Community Access</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Private Projects</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>Dedicated Phone Support</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>Unlimited</strong> Free Subdomains</li>
+                          <li><span class="fa-li"><i class="fas fa-check"></i></span>Monthly Status Reports</li>
+                        </ul>
+                        <a href="#" class="btn btn-block btn-primary text-uppercase">Read more</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Call to Action Section -->
-  <section class="page-section bg-dark text-white">
-    <div class="container text-center">
-      <h2 class="mb-4">Free Download at Start Bootstrap!</h2>
-      <a class="btn btn-light btn-xl" href="https://startbootstrap.com/themes/creative/">Download Now!</a>
+      <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </a>
+      <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </a>
     </div>
   </section>
 
@@ -226,12 +360,12 @@
       <div class="row">
         <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
           <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
-          <div>+1 (202) 555-0149</div>
+          <div>+374 98-333-855</div>
         </div>
         <div class="col-lg-4 mr-auto text-center">
           <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
           <!-- Make sure to change the email address in anchor text AND the link below! -->
-          <a class="d-block" href="mailto:contact@yourwebsite.com">contact@yourwebsite.com</a>
+          <a class="d-block" href="mailto:robert1stepanyan@gmail.com">robert1stepanyan@gmail.com</a>
         </div>
       </div>
     </div>

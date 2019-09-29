@@ -1,6 +1,6 @@
 import requests
 import time
-from get_top100_by_mrkt_cap import list_of_symbols
+from get_top_by_mrkt_cap import list_of_symbols
 
 
 url = "https://apidojo-yahoo-finance-v1.p.rapidapi.com/market/get-quotes"
